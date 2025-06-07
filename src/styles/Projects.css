@@ -1,0 +1,254 @@
+.projects-page {
+  background-color: black; 
+  color: #fefdf9;
+  padding: 2rem;
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 0; /* Above ::before */
+}
+
+.projectDataDetails-bold{
+  color: #a8dafb;
+}
+
+.repeated-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 10s linear infinite;
+  color: #89b6ff;
+  opacity: 0.4;
+  position: relative;
+  z-index: 1; /* Behind hanging lines */
+  padding: 1rem 0;
+}
+
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.hanging-line-left {
+  position: absolute;
+  width: 2px;
+  background-color: #8eb5d8b5;
+  top: 0;
+  z-index: 2;
+  left: 35%;
+}
+
+.hanging-line-right {
+  position: absolute;
+  width: 2px;
+  background-color: #8eb5d8b5;
+  top: 0;
+  z-index: 2;
+  right: 35%;
+}
+
+
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 3;
+  position: relative;
+}
+
+.section-nav {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  color: #fafafae4; 
+  background-color: #8eb5d826;
+  border: 1px solid #d0deebb5;
+  z-index: 3;
+}
+
+.section-nav span {
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.section-nav span:hover {
+  border-color: #fcfcfb;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.carousel-card {
+  background-color: #3b719510;
+  border: 1px solid #ffffff;
+  width: 400px;
+  height: 500px;
+  padding: 1rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+
+.carousel-card:hover {
+  transform: scale(1.0);
+  background-color: #89acc81b;
+  cursor: pointer;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 860px; /* Two cards (400px) + 30px gap + 30px gap padding */
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+.project-placeholder {
+  background-color: #2763a81e;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.project-placeholder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  opacity: 80%;
+}
+
+.project-info {
+  text-align: left;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.project-info p {
+  margin-top: 0rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #d2b64c;
+}
+
+.project-info ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.project-info li {
+  font-size: 0.85rem;
+  color: #fefdf9;
+  margin-bottom: 0.3rem;
+}
+
+
+.arrow {
+  background: none;
+  border: none;
+  color: #f4d35e;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow:hover {
+  color: white;
+}
+
+.arrow:disabled {
+  opacity: 0;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 1024px) {
+  .repeated-title {
+    font-size: clamp(8px, 1.6vw, 14px); 
+    margin-top: -5vh; 
+    position: relative;
+  }
+  .hanging-line-left {
+    position: absolute;
+    z-index: 2;
+    left: 40%;
+  }
+  
+  .hanging-line-right {
+    position: absolute;
+    z-index: 2;
+    right: 40%;
+  }
+  
+  .banner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 3;
+    position: relative;
+  }
+  .section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    z-index: 3;
+  }
+  .section-nav span {
+    padding-bottom: 0px;
+    font-size: clamp(8px, 1.6vw, 14px); 
+    border-bottom: 1px solid transparent;
+  }
+  .project-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .project-info li {
+    font-size: 0.6rem;
+  }
+
+  .carousel-viewport {
+    margin-top: 3vh;
+  }
+
+  .carousel-track{
+    gap: 5rem;
+  }
+  .carousel-card {
+    max-width: fit-content; 
+    margin-left: 0px;
+    height: 400px;
+  }
+
+  .project-placeholder {
+    height: 160px;
+  }
+  
+
+  
+}

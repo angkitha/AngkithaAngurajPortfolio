@@ -1,0 +1,290 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  color: #eee;
+  padding: 60px 60px 0 60px; /* remove bottom padding */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.left-right-container {
+  flex: 1; /* allows it to expand and push footer down */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-content {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* ← this centers children vertically */
+  height: 100%; /* fill available vertical space */
+}
+
+.left-side {
+  width: 640px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+.right-side {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.gif-grid {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.square-gif {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.folder-grid {
+  display: flex;
+  margin: 8vh auto 0 auto; /* top, horizontal, bottom margins */
+  gap: 20px;
+  width: max-content;
+}
+
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.folder-item:hover .folder-label {
+  text-decoration: underline;
+  color: #fff; /* Optional: add hover effect */
+}
+
+.folder-to-link {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.folder-label {
+  margin-top: 6px;
+  font-size: 10px;
+  text-align: center;
+  color: #ccc; /* or any color you prefer */
+}
+
+.thank-you {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 4vh; 
+  margin-bottom: 0px; 
+  font-size: 16px; 
+}
+
+.second-headline {
+  text-align: center;
+  font-style: italic;
+  color: #d2b64c;
+  margin-top: 0px; 
+  margin-bottom: 5px;
+  font-size: 14px; 
+}
+
+
+
+ul {
+  list-style-type: disc;
+  font-size: 12px; 
+  padding-left: 20px;
+}
+
+.ul-highlight {
+  font-weight: bold;
+  color: #94bee9;
+}
+
+ul ul {
+  list-style-type: circle;
+  font-size: 12px; 
+  padding-left: 20px;
+}
+
+.end-footer {
+  width: 100%;
+  height: 40px;
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid #333;
+  margin-top: 60px; /* Adds space from content */
+}
+
+
+.firefly-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* So it doesn’t block clicks */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgb(170, 209, 231);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveFirefly 10s linear infinite, blink 2s ease-in-out infinite;
+}
+
+@keyframes moveFirefly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(50px, -100px) scale(1.2);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-100px, 50px) scale(0.8);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(100px, 100px) scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Position each firefly randomly */
+.firefly:nth-child(1)  { top: 10%; left: 20%; animation-delay: 0s; }
+.firefly:nth-child(2)  { top: 40%; left: 70%; animation-delay: 2s; }
+.firefly:nth-child(3)  { top: 80%; left: 50%; animation-delay: 1s; }
+.firefly:nth-child(4)  { top: 30%; left: 90%; animation-delay: 3s; }
+.firefly:nth-child(5)  { top: 60%; left: 10%; animation-delay: 4s; }
+/* Add up to 20 with different top/left and delays */
+
+.end-footer {
+  margin-left: -60px;
+  margin-right: -60px;
+  width: calc(100% + 120px); /* Compensate for removed margins */
+  height: 40px;
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid #333;
+  
+  margin-top: 60px;
+}
+
+.end-footer a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.end-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 30px 20px 0 20px; /* Reduce padding */
+  }
+
+  .more-content {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .left-side {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-side {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .gif-grid {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .square-gif {
+    width: 60px;
+    height: 60px;
+  }
+
+  .folder-grid {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .folder-to-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .folder-label {
+    font-size: 10px;
+  }
+
+  .thank-you {
+    font-size: 12px;
+  }
+
+  .second-headline {
+    font-size: 11px;
+  }
+  
+  ul {
+    font-size: 10px; 
+  }
+
+  ul, ul ul {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+}

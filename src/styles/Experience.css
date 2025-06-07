@@ -1,0 +1,274 @@
+.experience-base-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #eee;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.descriptionsection-bold{
+  color: #a8dafb;
+}
+
+.experience-left-section {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding-left: 4vw;
+  justify-content: center;
+  width: 20%;
+  z-index: 1;
+}
+
+.experience-right-section {
+  position: relative;
+  display: flex;
+  overflow: hidden; 
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 35vw; 
+  width: 100%;
+  padding-right: 12vw;
+  z-index: 2;
+  height: 100%;
+}
+
+
+/* Records */
+.record-chain {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7vw;
+  gap: 2.5vw;
+}
+
+.record-link {
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1vh;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.record-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: slowSpin 10s linear infinite;
+  z-index: 1;
+}
+
+.record-link:hover .record-image {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+/* Text to left to vinyl sttyles */
+.vinyl-wrapper {
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curved-text-svg.left-arc {
+  position: absolute;
+  left: -4vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8vw;
+  height: 8vw;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.curved-text-svg text {
+  fill: #ffffff;
+  font-size: 0.6vw;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* === Carousel Styles === */
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* keep this to hide overflow */
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.6s ease-in-out;
+}
+
+
+/* Arrows */
+.nav-arrow {
+  font-size: 2.5rem;
+  color: #e0b900;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.arrow-left {
+  left: -15px;
+}
+
+.arrow-right {
+  right: -15px;
+}
+
+.arrow.disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .experience-base-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .experience-left-section {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+
+  .record-chain {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+    gap: 4vw;
+  }
+
+  .record-link {
+    width: 16vw;
+    height: 16vw;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .vinyl-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .curved-text-svg.left-arc {
+    position: absolute;
+    top: -10%; /* move up above the vinyl */
+    left: 10%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 120%;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .curved-text-svg text {
+    fill: #ffffff;
+    font-size: clamp(6px, 1.6vw, 14px); /* responsive font */
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+
+  .experience-right-section {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .experience-slide {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .arrow {
+    font-size: 2rem;
+  }
+
+  .arrow-left {
+    left: -10px;
+  }
+
+  .arrow-right {
+    right: -10px;
+  }
+}
+
+/* Target all text inside ExperiencePlayer for scaling */
+.experience-slide {
+  font-size: 1rem; /* Default */
+}
+
+@media (max-width: 1024px) {
+  .experience-slide {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-slide {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-slide {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-slide {
+    font-size: 0.68rem;
+  }
+}
+

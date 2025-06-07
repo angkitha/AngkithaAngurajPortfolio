@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'FlaemischeKanzleischrift';
+  src: url('../fonts/flaemische_kanzleischrift.ttf') format('truetype');
+}
+
+/* Used across App.tsx. Needed to keep turntable static across transition.*/
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 160px;
+  padding-right: 280px;
+  background-color: #000000;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+
+/* Wrapper for LandingPage.tsx only. Used for window consistency.*/
+.landing-page-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.rightside-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  text-align: center;
+  color: #eee;
+}
+  
+.landing-text {
+  display:flex; 
+  flex-direction: row;
+}
+
+.landing-text-line-1 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: white;
+  text-align: left;
+}
+
+.landing-text-line-2-container {
+  display:inline;
+  margin-top: -6vh;
+  margin-left: -8vw;
+}
+
+.landing-text-line-2-capitalletter {
+  font-family: 'FlaemischeKanzleischrift';
+  font-size: 10rem; 
+  color: #ffec7f; /* highlight color */
+}
+
+.landing-text-line-2-highlight {
+  margin-left: -4vw;
+  font-size: 1.3rem; 
+  font-weight: 100;
+  font-family:  Arial, Helvetica, sans-serif;
+  color: #ffec7f; 
+}
+ 
+/* Container for the play button and its text */
+.play-instruction-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* space between text and play button */
+  margin-top: -5vh;
+}
+  
+.play-instruction-landing {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #92abd9;
+  margin: 0; 
+}
+  
+.play-button {
+  display: block;          
+  margin: 20px auto 0 auto; 
+  margin-top: 20px;
+  width: 45px;
+  height: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.582);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+  
+.play-button:hover {
+  background-color: rgb(136, 167, 200); 
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0 11px 19px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
+  margin-left: 0; 
+  transform: translateX(13px);
+}
+
+/* Styling for window resizing: making window smaller */
+@media (max-width: 1020px) {
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .landing-page-container {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+  }
+  .text-content {
+    max-width: 100%;
+  }
+  .landing-text-line-1 {
+    font-size: 1rem;
+  }
+  .landing-text-line-2-capitalletter {
+    font-size: 6rem;
+  }
+  .landing-text-line-2-highlight {
+    font-size: 1rem;
+  }
+  .play-instruction-landing {
+    font-size: 0.8rem;
+  }
+  .play-button {
+    width: 38px;
+    height: 38px;
+  }
+  .play-icon {
+    border-width: 9px 0 9px 15px;
+    transform: translateX(10px);
+  }
+  .landing-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .turntable-section,
+  .text-section {
+    width: 100%;
+    text-align: center;
+  }
+}
+  

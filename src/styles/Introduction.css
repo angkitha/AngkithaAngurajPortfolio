@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'FlaemischeKanzleischrift';
+  src: url('../fonts/flaemische_kanzleischrift.ttf') format('truetype');
+}
+
+.introduction-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100vw;            
+    height: 100vh;
+    padding-left: 60px;
+    padding-right: 0; 
+    gap: 60px;
+    overflow: visible;
+  }
+  
+  .introduction-section-text {
+    flex-shrink: 1;
+    flex-grow: 0;
+    max-width: calc(100vw - 100px); 
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    text-align: right; 
+    margin-left: auto;
+    color:#d3d3d3; 
+  }
+  
+  .main-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  
+  .main-heading-capitalletter {
+    font-family: 'FlaemischeKanzleischrift';
+    font-size: 4rem; 
+    color: #ffec7f; /* highlight color */
+  }
+
+  .main-heading-highlight {
+    font-family: arial;
+    color: #ffec7f; /* highlight color */
+    font-weight: bold; 
+  }
+  
+  .second-heading {
+    font-size: 1.4rem;
+    color: #f4cf79; 
+    margin-bottom: 0px;
+    font-style: italic;
+  }
+  
+  .third-heading {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .main-heading, .second-heading, .third-heading {
+      margin: 0;
+      line-height: 1.2; /* tighter line spacing */
+  }
+  .third-heading {
+    font-size: 1rem;
+    margin-bottom: 24px; /* increase space before description */
+  }
+
+  .description-box {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  .description-highlight {
+    font-weight: bold;
+    color: #94bee9;
+  }
+
+  .squares-container {
+    position: absolute;
+    right: -140px;            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .squares-container.fade-in {
+    opacity: 1;
+  }
+
+  .square-link {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+  }
+  
+  .square-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .square-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(79, 94, 115, 0.66); 
+    color: white; 
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .square-box:hover .overlay {
+    background-color: rgba(97, 122, 172, 0.651); 
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+
+  @media (max-width: 1020px) {
+    .introduction-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px;
+      gap: 30px;
+      height: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  
+    .introduction-section-text {
+      text-align: center;
+      margin-left: 0;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  
+    .description-box {
+      font-size: 0.75rem;
+      max-width: 90vw;
+      line-height: 1.5;
+    }
+  
+    .main-heading {
+      font-size: 1.5rem;
+    }
+  
+    .main-heading-capitalletter {
+      font-size: 3rem;
+    }
+  
+    .second-heading {
+      font-size: 1.2rem;
+    }
+  
+    .third-heading {
+      font-size: 0.95rem;
+    }
+  
+    .squares-container {
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+  
+    .square-link {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .square-box {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .overlay {
+      font-size: 0.5rem;
+      padding: 4px;
+      text-align: center;
+    }
+  }
+  

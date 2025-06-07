@@ -1,0 +1,20 @@
+
+.page-wrapPrecaution {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.turntable-section {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: clamp(200px, 60vw, 400px);
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 1000;
+}

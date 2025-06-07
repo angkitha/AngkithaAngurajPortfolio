@@ -1,0 +1,91 @@
+.spinning {
+  width: 80%;
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  animation: spin 4s linear infinite;
+  transform-origin: center center;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  z-index: 1;
+  object-fit: cover;
+}
+
+
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .outer-container {
+    position: relative;
+    width: clamp(200px, 60vw, 400px);
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    background-color: #d3d3d3;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    z-index: 0;
+  }
+
+  /* Smaller size only in Introduction */
+.turntable-intro .outer-container {
+  width: clamp(200px, 60vw, 400px);
+}
+  
+  
+  .small-circle {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    top: -18%;
+    left: -18%;
+    z-index: 2;
+  }
+  
+  .connecting-line {
+    position: absolute;
+    width: 0.5%;
+    height: 47%;
+    background-color: white;
+    top: -9%;
+    left: -9%;
+    transform: rotate(-42deg);
+    transform-origin: top;
+    z-index: 3;
+  }
+
+  @media (max-width: 1020px) {
+    .turntable-intro .outer-container {
+      width: clamp(120px, 30vw, 200px);
+    }
+  
+    .turntable-intro .spinning {
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .outer-container {
+      width: 60vw;
+    }
+  
+    .spinning {
+      width: 80%;
+    }
+  }
+  
+  
+ 
+  

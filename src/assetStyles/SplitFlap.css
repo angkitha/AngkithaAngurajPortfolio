@@ -1,0 +1,150 @@
+/* src/styles/SplitFlap.css */
+
+.splitflap-wrapper {
+    width: 30px;
+    height: 60px;
+    perspective: 1000px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    margin: 1px;
+  }
+  
+  .splitflap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  
+  .top,
+  .bottom,
+  .fold-top,
+  .fold-bottom {
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(37, 37, 37);
+    color: white; 
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .full {
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(37, 37, 37);
+    color: white; 
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top {
+    border-bottom: none;
+  }
+  
+  .bottom {
+    border-top: none;
+  }
+  
+  .fold {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    animation: none;
+    z-index: 2;
+  }
+  
+  .fold-top,
+  .fold-bottom {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fold-top {
+    top: 0;
+    transform-origin: bottom;
+    background: black;
+    transform: rotateX(0deg); /* backside */
+    border-bottom: 1px solid gray;
+  }
+  
+  .fold-bottom {
+    top: 30px;
+    transform-origin: top;
+    transform: rotateX(180deg); /* backside */
+    background: black;
+    border-bottom: 1px solid gray;
+  }
+  
+  .splitflap.flip .fold {
+    animation: flipDownFade 1.5s forwards cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes flipDownFade {
+    0% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+    10% {
+        transform: rotateX(30deg);
+        opacity:0.8;
+    }
+    20% {
+      transform: rotateX(60deg);
+      opacity: 0.6;
+    }
+    30% {
+        transform: rotateX(85deg);
+        opacity:0.5;
+    }
+    40% {
+      transform: rotateX(120deg);
+      opacity: 0.2;
+    }
+    60% {
+      transform: rotateX(160deg);
+      opacity: 0.6;
+    }
+    75% {
+        transform: rotateX(30deg);
+        opacity:0.8;
+    }
+    100% {
+      transform: rotateX(180deg);
+      opacity: 1;
+    }
+  }
+  
+  
+  @media screen and (max-width: 1024px) {
+    .splitflap {
+      font-size: 14px;
+    }
+    .full {
+      height: 36px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .splitflap {
+      font-size: 8px;
+    }
+    .full {
+      height: 28px;
+    }
+  }
+  

@@ -1,0 +1,120 @@
+.game-browser {
+    width: 640px;
+    height: 400px;
+    background-color: black;
+    border: 1px solid #ccc;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  
+  .game-browser-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444;
+  }
+
+  
+  .game-browser-content {
+    flex-grow: 1;
+    height: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.354) 0%,
+      rgba(36, 87, 159, 0.673) 60%,
+      rgba(255, 212, 138, 0.63) 100%
+    );
+  
+    mix-blend-mode: hard-light; 
+  }
+  
+  
+  .game-browser-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: monospace;
+    padding-top: 5px;
+    border-top: 1px solid #444;
+  }
+  
+  .jump-button {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin-left: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 1024px) {
+    .game-browser {
+      padding: 6px;
+      width: clamp(350px, 1.6vw, 14px);
+      height: clamp(120px, 1.6vw, 14px);
+      aspect-ratio: 4 / 3;
+    }
+  
+    .game-browser-header {
+      font-size: 0.9rem;
+    }
+  
+    
+    .game-browser-content {
+      flex-grow: 1;
+      height: 50;
+    }
+  
+    .game-browser-footer {
+      font-size: 0.7rem;
+    }
+  
+    .jump-button {
+      width: 14px;
+      height: 14px;
+    }
+  }
