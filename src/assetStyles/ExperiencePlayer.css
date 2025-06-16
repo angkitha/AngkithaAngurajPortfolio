@@ -126,12 +126,15 @@
   
   .tags {
     display: flex;
+    flex-wrap: wrap; 
     align-items: center;
-    align-content: center;
     gap: 8px;
     margin: 8px 0;
     font-size: 0.9rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
+  
   
   .tag {
     display: flex; 
@@ -169,7 +172,7 @@
 
   @media (max-width: 1020px) {
     .experience-player-window {
-      max-width: 65vw;
+      max-width: 60vw;
       max-height: 75vh;
       padding: 12px;
     }

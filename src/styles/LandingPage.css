@@ -43,40 +43,6 @@
   color: #eee;
 }
   
-.landing-text {
-  display:flex; 
-  flex-direction: row;
-}
-
-.landing-text-line-1 {
-  font-family: 'Times New Roman', serif;
-  font-size: 1.3rem;
-  font-style: italic;
-  color: white;
-  text-align: left;
-}
-
-.landing-text-line-2-container {
-  display:inline;
-  margin-top: -6vh;
-  margin-left: -8vw;
-}
-
-.landing-text-line-2-capitalletter {
-  font-family: 'FlaemischeKanzleischrift';
-  font-size: 10rem; 
-  color: #ffec7f; /* highlight color */
-}
-
-.landing-text-line-2-highlight {
-  margin-left: -4vw;
-  font-size: 1.3rem; 
-  font-weight: 100;
-  font-family:  Arial, Helvetica, sans-serif;
-  color: #ffec7f; 
-}
- 
-/* Container for the play button and its text */
 .play-instruction-container {
   display: flex;
   align-items: center;
@@ -215,15 +181,6 @@
   .text-content {
     max-width: 100%;
   }
-  .landing-text-line-1 {
-    font-size: 1rem;
-  }
-  .landing-text-line-2-capitalletter {
-    font-size: 6rem;
-  }
-  .landing-text-line-2-highlight {
-    font-size: 1rem;
-  }
   .play-instruction-landing {
     font-size: 0.8rem;
   }
@@ -257,12 +214,11 @@
   .circle-button {
     width: 34px;
     height: 34px;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
   .dial-knob {
     width: 40px;
     height: 40px;
   }
-  
 }
   
