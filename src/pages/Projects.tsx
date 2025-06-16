@@ -153,6 +153,8 @@ const Projects: React.FC = () => {
   const [lineHeight, setLineHeight] = useState(0);
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const [cardWidth, setCardWidth] = useState(window.innerWidth <= 768 ? 360 : 432);
+  const isMobile = window.innerWidth <= 768;
+
 
   useLayoutEffect(() => {
     const updateLineHeight = () => {
@@ -174,17 +176,17 @@ const Projects: React.FC = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? Math.max(0, projectData.length - 2) : prev - 1
-    );
-  };
+  
+const handlePrev = () => {
+  setCurrentIndex((prev) => Math.max(0, prev - 1));
+};
 
-  const handleNext = () => {
-    setCurrentIndex((prev) =>
-      prev + 2 >= projectData.length ? 0 : prev + 1
-    );
-  };
+const handleNext = () => {
+  setCurrentIndex((prev) => {
+    const maxIndex = isMobile ? projectData.length - 1 : projectData.length - 2;
+    return prev >= maxIndex ? 0 : prev + 1;
+  });
+};
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
