@@ -9,21 +9,30 @@ interface Props {
 const LandingPage: React.FC<Props> = ({ fadeClass, onPlay }) => {
   return (
     <div className={`landing-page-container ${fadeClass}`}>
-      <div className= "rightside-content">
-        <div className="landing-text">
-          <span className="landing-text-line-1">welcome to my</span>
-          <div className="landing-text-line-2-container">
-            <span className="landing-text-line-2-capitalletter">P</span>
-            <span className="landing-text-line-2-highlight">ORTFOLIO</span>
+      <div className="rightside-content">
+
+        {/* LED display */}
+        <div className="digital-display-container">
+          <div className="digital-display-screen">
+            <div className="scrolling-text">
+              WELCOME TO MY PORTFOLIO. PRESS PLAY TO START
+            </div>
           </div>
         </div>
-        
-        <div className="play-instruction-container">
-          <p className="play-instruction-landing">PRESS PLAY TO START</p>
-          <button className="play-button" onClick={onPlay} aria-label="Play">
-            <div className="play-icon"></div>
-          </button>
+
+        {/* Circle buttons */}
+        <div className="button-row">
+          <button className="circle-button">PREV</button>
+          <button className="circle-button">NEXT</button>
+          <button className="circle-button">STOP</button>
         </div>
+
+        {/* Dial */}
+        <div className="dial-container">
+          <div className="dial-knob" onClick={onPlay}/>
+          <div className="dial-label">PLAY</div>
+        </div>
+
       </div>
     </div>
   );

@@ -3,6 +3,12 @@
   src: url('../fonts/flaemische_kanzleischrift.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'DigitalDisplay';
+  src: url('../fonts/DS-DIGI.TTF') format('truetype');
+}
+
+
 /* Used across App.tsx. Needed to keep turntable static across transition.*/
 .main-container {
   width: 100%;
@@ -116,6 +122,83 @@
   transform: translateX(13px);
 }
 
+
+
+.digital-display-container {
+  background-color: #000;
+  border: 2px solid #222;
+  border-radius: 6px;
+  width: 240px;
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.digital-display-screen {
+  font-family: 'DigitalDisplay';
+  font-size: 1.3rem;
+  color: #f1d57a;
+  white-space: nowrap;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-text {
+  padding-left: 100%;
+  animation: scroll-left 8s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.circle-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3b4f5f7a;
+  color: white;
+  font-size: 0.5rem;
+  border: 1px solid rgb(135, 135, 135);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.dial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dial-knob {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, rgb(61, 89, 123), rgb(14, 26, 37));
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 5px rgba(255,255,255,0.1), inset 2px 2px 5px rgba(0,0,0,0.6);
+  margin-bottom: 6px;
+}
+
+.dial-knob:hover{
+  background-color: rgba(167, 194, 212, 0.866);
+}
+
+.dial-label {
+  font-size: 0.6rem;
+  color: #ccc;
+}
+
+
 /* Styling for window resizing: making window smaller */
 @media (max-width: 1020px) {
   .main-container {
@@ -163,5 +246,23 @@
     width: 100%;
     text-align: center;
   }
+
+  .digital-display-container {
+    width: 180px;
+    height: 35px;
+  }
+  .digital-display-screen {
+    font-size: 1.1rem;
+  }
+  .circle-button {
+    width: 34px;
+    height: 34px;
+    font-size: 0.6rem;
+  }
+  .dial-knob {
+    width: 40px;
+    height: 40px;
+  }
+  
 }
   
