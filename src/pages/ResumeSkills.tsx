@@ -115,7 +115,7 @@ const FolderArea: React.FC = () => {
             </button>
             <a
               className="pdf-link"
-              href="https://example.com/your-resume.pdf"
+              href="https://drive.google.com/file/d/1AhOfHVOG9tjQZwi84f0_Qk0EDyVaKt5A/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

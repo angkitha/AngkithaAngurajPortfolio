@@ -27,7 +27,8 @@
     width: clamp(200px, 60vw, 400px);
     aspect-ratio: 1 / 1;
     margin: auto;
-    background-color: #d3d3d3;
+    background-color: #3b4f5fb7;
+    border: 2px #d3d3d3; 
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -46,7 +47,8 @@
     position: absolute;
     width: 20%;
     height: 20%;
-    background-color: #d3d3d3;
+    background-color: #3b4f5fb7;
+    border: 2px #d3d3d3; 
     border-radius: 50%;
     top: -18%;
     left: -18%;
