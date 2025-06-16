@@ -163,9 +163,9 @@ const Projects: React.FC = () => {
     };
 
     const handleResize = () => {
-      setCardWidth(window.innerWidth <= 768 ? 360 : 432);
+      setCardWidth(window.innerWidth <= 768 ? 400 : 432);
       updateLineHeight();
-    };
+    };    
 
     updateLineHeight();
     window.addEventListener("resize", updateLineHeight);

@@ -240,9 +240,10 @@
     gap: 5rem;
   }
   .carousel-card {
-    max-width: fit-content; 
-    margin-left: 0px;
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Let it grow */
+    padding: 1rem;
   }
 
   .project-placeholder {
