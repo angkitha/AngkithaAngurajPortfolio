@@ -4,16 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machinery Website Redesign — Angkitha Anguraj</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="page page--case-study" style="--demo-aspect: 2554 / 1822">
+
     <header class="header">
       <nav class="header-nav">
         <a href="index.html" class="nav-btn nav-btn--muted">HOME</a>
+
         <button type="button" class="nav-btn nav-btn--muted" id="about-btn" aria-describedby="about-tooltip">
           ABOUT ME
           <span class="tooltip" id="about-tooltip" role="tooltip">Under Construction</span>
@@ -22,44 +27,61 @@
     </header>
 
     <main class="case-study">
+
       <section class="case-study-demo">
         <div class="case-study-video-wrap">
+
           <video
             class="case-study-video"
-            src="assets/machinery-demo.mov"
             autoplay
             loop
             muted
             playsinline
+            preload="auto"
             aria-label="Machinery website redesign demo"
-          ></video>
+          >
+            <source src="https://drive.google.com/file/d/1OJkDAGvVYSHAjlG8q5zcti70FEHQ4J2H/view?usp=sharing" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
         </div>
       </section>
 
       <section class="case-study-content">
         <div class="case-study-details">
+
           <div class="case-study-block">
+
             <div class="case-study-row case-study-row--title">
               <span class="case-study-label case-study-label--bold">A</span>
               <h1 class="case-study-title">MACHINERY WEBSITE REDESIGN</h1>
             </div>
+
             <div class="case-study-row case-study-row--body">
               <span class="case-study-label">B</span>
+
               <div class="case-study-text">
                 <p>Tasked with redesigning a client's industrial parts shopping catalog ahead of a proposal pitch, I began by identifying key friction points in the existing experience: an outdated visual design, poor color contrast and readability, and an excessive number of steps between the landing page and purchase.</p>
+
                 <p>To ground the redesign in real user needs, I conducted interviews with a small group of users familiar with the original site, using their feedback to define clear design priorities. The resulting redesign streamlined the path to purchase by surfacing component specifications and key statistics directly in the catalog view, reducing the need for users to hunt for critical information before committing to a buy.</p>
+
                 <p>A central feature of the new experience is an integrated AI assistant, designed to help users quickly understand technical product details and identify the right components for their specific requirements. This AI-driven layer significantly reduces cognitive load and shortens the time from site entry to purchase intent — particularly valuable for customers who may not have deep technical familiarity with the products.</p>
+
                 <p>The redesign brought the interface up to modern accessibility and usability standards, resulting in a cleaner, more intuitive experience that supports both informed decision-making and confident purchasing.</p>
               </div>
+
             </div>
+
           </div>
 
           <div class="case-study-row case-study-row--footer">
             <span class="case-study-label">00</span>
             <p class="case-study-footer">a more robust case study to come...</p>
           </div>
+
         </div>
       </section>
+
     </main>
   </div>
 
