@@ -389,7 +389,7 @@ a.vitals-link:hover {
   flex-shrink: 0;
   line-height: 0;
   max-width: 100%;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
   width: 698px;
 }
