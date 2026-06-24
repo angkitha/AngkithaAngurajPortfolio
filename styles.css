@@ -372,7 +372,22 @@ a.vitals-link:hover {
   min-height: 0;
   width: 100%;
 }
+.video-link-wrapper {
+  display: block;
+  width: 100%;
+}
 
+.video-link-wrapper:hover {
+  cursor: pointer;
+}
+
+.video-link-wrapper img {
+  transition: transform 0.2s ease;
+}
+
+.video-link-wrapper:hover img {
+  transform: scale(1.01);
+}
 .case-study-demo {
   align-items: center;
   display: flex;
