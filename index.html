@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angkitha Anguraj — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=EB+Garamond&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <nav class="header-nav">
+        <a href="index.html" class="nav-btn nav-btn--active">HOME</a>
+        <button type="button" class="nav-btn nav-btn--muted" id="about-btn" aria-describedby="about-tooltip">
+          ABOUT ME
+          <span class="tooltip" id="about-tooltip" role="tooltip">Under Construction</span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <p class="hero-greeting">HEY, I'M</p>
+      <img class="hero-signature" src="assets/signature.png" alt="Angkitha Anguraj">
+      <div class="hero-bio">
+        <span class="hero-bio-number">01</span>
+        <p class="hero-bio-text">I'm an AI strategist and UX Designer. I strive to craft seamless, human-centered products.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <aside class="vitals">
+        <div class="vitals-list">
+          <div class="vitals-row">
+            <span class="vitals-number">02</span>
+            <span class="vitals-link">angkithaa@gmail.com</span>
+          </div>
+          <div class="vitals-row">
+            <span class="vitals-number">03</span>
+            <a href="https://www.linkedin.com/in/angkitha-anguraj/" target="_blank" rel="noopener noreferrer" class="vitals-link">LinkedIn</a>
+          </div>
+          <div class="vitals-row">
+            <span class="vitals-number">04</span>
+            <span class="vitals-link">San Francisco, CA</span>
+          </div>
+          <div class="vitals-row">
+            <span class="vitals-number">05</span>
+            <a href="https://drive.google.com/file/d/1RWTrI_ng5fZsf26B3z-_maYz0xkTgNiN/view" target="_blank" rel="noopener noreferrer" class="vitals-link">Resume</a>
+          </div>
+          <div class="vitals-row">
+            <span class="vitals-number">00</span>
+            <span class="vitals-link">More to Come... 🚧</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="projects">
+        <a href="machinery-redesign.html" class="project-frame" data-project="machinery" data-href="machinery-redesign.html">
+          <div class="laptop-mockup">
+            <img class="laptop-screen laptop-screen--machinery" src="assets/machine-cover.png" alt="Machinery Website Redesign preview">
+            <img class="laptop-frame" src="assets/laptop.png" alt="">
+          </div>
+          <span class="project-label">MACHINERY WEBSITE REDESIGN</span>
+        </a>
+
+        <a href="internal-project-redesign.html" class="project-frame" data-project="internal" data-href="internal-project-redesign.html">
+          <div class="laptop-mockup">
+            <img class="laptop-screen laptop-screen--internal" src="assets/redesign-cover.png" alt="Internal Project Redesign preview">
+            <img class="laptop-frame" src="assets/laptop.png" alt="">
+          </div>
+          <span class="project-label">INTERNAL PROJECT REDESIGN</span>
+        </a>
+
+        <a href="fintech-website-redesign.html" class="project-frame" data-project="fintech" data-href="fintech-website-redesign.html">
+          <div class="laptop-mockup">
+            <img class="laptop-screen laptop-screen--fintech" src="assets/design-orig.png" alt="Fintech Website Redesign preview">
+            <img class="laptop-frame" src="assets/laptop.png" alt="">
+          </div>
+          <span class="project-label">FINTECH WEBSITE REDESIGN</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
