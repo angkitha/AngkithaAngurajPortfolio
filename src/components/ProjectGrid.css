@@ -2,7 +2,7 @@
   display: flex;
   flex: 1 1 auto;
   gap: clamp(12px, 2.08vw, 30px);
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: clamp(8px, 1.5vh, 30px);
   min-width: 0;
