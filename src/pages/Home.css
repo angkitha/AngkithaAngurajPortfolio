@@ -17,3 +17,7 @@
   min-height: 0;
   width: 100%;
 }
+
+.portfolio-home__main .viewport-fit__scaler {
+  max-width: 1440px;
+}
