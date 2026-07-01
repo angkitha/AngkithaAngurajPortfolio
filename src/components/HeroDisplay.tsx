@@ -1,5 +1,6 @@
 import { MenuRow } from './MenuRow';
 import { SkillsTank } from './SkillsTank';
+import { assetPath } from '../lib/assetPath';
 import './HeroDisplay.css';
 
 type HeroDisplayProps = {
@@ -15,10 +16,10 @@ export function HeroDisplay({ skillsTankSession }: HeroDisplayProps) {
         </div>
         <div className="hero-display__names">
           <div className="hero-display__name-crop hero-display__name-crop--angkitha">
-            <img src="/images/angkitha.png" alt="" draggable={false} />
+            <img src={assetPath('images/angkitha.png')} alt="" draggable={false} />
           </div>
           <div className="hero-display__name-crop hero-display__name-crop--anguraj">
-            <img src="/images/angkitha.png" alt="" draggable={false} />
+            <img src={assetPath('images/angkitha.png')} alt="" draggable={false} />
           </div>
         </div>
       </div>

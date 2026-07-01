@@ -1,6 +1,7 @@
 import { HeaderNav } from '../components/HeaderNav';
 import { IMacDisplay } from '../components/IMacDisplay';
 import { CaseStudySection } from '../components/CaseStudySection';
+import { assetPath } from '../lib/assetPath';
 import './CaseStudy.css';
 
 const DEMO_URL = 'https://drive.google.com/file/d/1Xp8630iNsQRUiwUjPEujA_Tsw3DyQLf6/view';
@@ -22,14 +23,14 @@ export function FintechCaseStudy() {
               Watch Demo
             </a>
             <img
-              src="/images/case-studies/play-icon.png"
+              src={assetPath('images/case-studies/play-icon.png')}
               alt=""
               className="case-study__play-icon"
               draggable={false}
             />
           </div>
           <IMacDisplay
-            demoSrc="/images/case-studies/fintech-demo.gif"
+            demoSrc={assetPath('images/case-studies/fintech-demo.gif')}
             demoAlt="Fintech website design demo"
           />
         </aside>
@@ -49,7 +50,7 @@ export function FintechCaseStudy() {
           <CaseStudySection
             letter="B"
             title="Background"
-            backgroundSrc="/images/case-studies/fintech/bg-background.png"
+            backgroundSrc={assetPath('images/case-studies/fintech/bg-background.png')}
           >
             <p>
               We were introduced to our client, a financial technology company, and their main internal
@@ -93,7 +94,7 @@ export function FintechCaseStudy() {
           <CaseStudySection
             letter="C"
             title="Competitor Analysis and Room for Improvement"
-            backgroundSrc="/images/case-studies/fintech/bg-competitor.png"
+            backgroundSrc={assetPath('images/case-studies/fintech/bg-competitor.png')}
           >
             <p>
               To establish a &ldquo;design guiding star&rdquo;, we looked to two of the most recognizable names
@@ -134,7 +135,7 @@ export function FintechCaseStudy() {
           <CaseStudySection
             letter="D"
             title="Personas"
-            backgroundSrc="/images/case-studies/fintech/bg-personas.png"
+            backgroundSrc={assetPath('images/case-studies/fintech/bg-personas.png')}
           >
             <p>
               As per usual, I generated 2 user personas during our initial exploration of the product. While I
@@ -148,7 +149,7 @@ export function FintechCaseStudy() {
               <article className="case-study__persona-card">
                 <div className="case-study__persona-header">
                   <img
-                    src="/images/case-studies/fintech/persona-alex.png"
+                    src={assetPath('images/case-studies/fintech/persona-alex.png')}
                     alt=""
                     className="case-study__persona-avatar"
                     draggable={false}
@@ -188,7 +189,7 @@ export function FintechCaseStudy() {
               <article className="case-study__persona-card">
                 <div className="case-study__persona-header">
                   <img
-                    src="/images/case-studies/fintech/persona-jessica.png"
+                    src={assetPath('images/case-studies/fintech/persona-jessica.png')}
                     alt=""
                     className="case-study__persona-avatar"
                     draggable={false}
@@ -230,7 +231,7 @@ export function FintechCaseStudy() {
           <CaseStudySection
             letter="E"
             title="Results"
-            backgroundSrc="/images/case-studies/fintech/bg-results.png"
+            backgroundSrc={assetPath('images/case-studies/fintech/bg-results.png')}
           >
             <p>
               The final product improved upon all the previously identified pain points. It was personable,
@@ -268,14 +269,14 @@ export function FintechCaseStudy() {
             <div className="case-study__wireframes-row">
               <div className="case-study__wireframe-panel">
                 <img
-                  src="/images/case-studies/fintech/wireframe-iva.png"
+                  src={assetPath('images/case-studies/fintech/wireframe-iva.png')}
                   alt="AI-assisted call center wireframe"
                   draggable={false}
                 />
               </div>
               <div className="case-study__wireframe-panel case-study__wireframe-panel--mar">
                 <img
-                  src="/images/case-studies/fintech/wireframe-mar.png"
+                  src={assetPath('images/case-studies/fintech/wireframe-mar.png')}
                   alt="Account wizard wireframe"
                   draggable={false}
                 />
@@ -301,14 +302,14 @@ export function FintechCaseStudy() {
             <div className="case-study__wireframes-row case-study__wireframes-row--tall">
               <div className="case-study__wireframe-panel case-study__wireframe-panel--tall">
                 <img
-                  src="/images/case-studies/fintech/wireframe-system.png"
+                  src={assetPath('images/case-studies/fintech/wireframe-system.png')}
                   alt="Design system wireframe"
                   draggable={false}
                 />
               </div>
               <div className="case-study__wireframe-panel case-study__wireframe-panel--tall-narrow">
                 <img
-                  src="/images/case-studies/fintech/wireframe-iv.png"
+                  src={assetPath('images/case-studies/fintech/wireframe-iv.png')}
                   alt="Investment view wireframe"
                   draggable={false}
                 />

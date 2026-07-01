@@ -1,4 +1,5 @@
 import { HeaderNav } from '../components/HeaderNav';
+import { assetPath } from '../lib/assetPath';
 import './AboutMe.css';
 
 const bioParagraphs = [
@@ -22,7 +23,7 @@ export function AboutMe() {
           <div className="about-card__header">
             <div className="about-card__title-block">
               <div className="about-card__title-crop">
-                <img src="/images/about-me-title.png" alt="About Me" draggable={false} />
+                <img src={assetPath('images/about-me-title.png')} alt="About Me" draggable={false} />
               </div>
               <p className="about-card__name">ANGKITHA ANGURAJ KUMAR</p>
             </div>
@@ -32,10 +33,10 @@ export function AboutMe() {
           <div className="about-card__body">
             <div className="about-card__photo-column">
               <div className="about-card__photo-crop">
-                <img src="/images/profile-photo.png" alt="Angkitha Anguraj Kumar" draggable={false} />
+                <img src={assetPath('images/profile-photo.png')} alt="Angkitha Anguraj Kumar" draggable={false} />
               </div>
               <div className="about-card__signature-crop">
-                <img src="/images/angkitha-signature.png" alt="" draggable={false} />
+                <img src={assetPath('images/angkitha-signature.png')} alt="" draggable={false} />
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 import { HeaderNav } from '../components/HeaderNav';
 import { IMacDisplay } from '../components/IMacDisplay';
+import { assetPath } from '../lib/assetPath';
 import '../components/CaseStudySection.css';
 import './CaseStudy.css';
 
@@ -22,14 +23,14 @@ export function AccessibilityPluginCaseStudy() {
               Watch Demo
             </a>
             <img
-              src="/images/case-studies/play-icon.png"
+              src={assetPath('images/case-studies/play-icon.png')}
               alt=""
               className="case-study__play-icon"
               draggable={false}
             />
           </div>
           <IMacDisplay
-            demoSrc="/images/case-studies/accessibility-plugin-demo.gif"
+            demoSrc={assetPath('images/case-studies/accessibility-plugin-demo.gif')}
             demoAlt="Accessibility plugin demo"
           />
         </aside>

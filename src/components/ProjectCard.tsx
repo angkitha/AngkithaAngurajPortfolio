@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Project } from '../data/projects';
+import { assetPath } from '../lib/assetPath';
 import './ProjectCard.css';
 
 type ProjectCardProps = {
@@ -17,7 +18,7 @@ function DeviceContent({ project }: ProjectCardProps) {
           draggable={false}
         />
       </div>
-      <img src="/images/macbook.png" alt="" className="project-card__frame" draggable={false} />
+      <img src={assetPath('images/macbook.png')} alt="" className="project-card__frame" draggable={false} />
     </div>
   );
 }

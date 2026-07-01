@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { HeaderNav } from '../components/HeaderNav';
 import { IMacDisplay } from '../components/IMacDisplay';
 import { CaseStudySection } from '../components/CaseStudySection';
+import { assetPath } from '../lib/assetPath';
 import './CaseStudy.css';
 
 const DEMO_URL = 'https://drive.google.com/file/d/1po4kGNLHcdwH9DsyJbTkaAniG9OsD3Ro/view';
@@ -23,14 +24,14 @@ export function InternalRedesignCaseStudy() {
               Watch Demo
             </a>
             <img
-              src="/images/case-studies/play-icon.png"
+              src={assetPath('images/case-studies/play-icon.png')}
               alt=""
               className="case-study__play-icon"
               draggable={false}
             />
           </div>
           <IMacDisplay
-            demoSrc="/images/case-studies/internal-redesign-demo.gif"
+            demoSrc={assetPath('images/case-studies/internal-redesign-demo.gif')}
             demoAlt="Internal project redesign demo"
           />
         </aside>
@@ -50,7 +51,7 @@ export function InternalRedesignCaseStudy() {
           <CaseStudySection
             letter="B"
             title="Background"
-            backgroundSrc="/images/case-studies/internal/bg-background.png"
+            backgroundSrc={assetPath('images/case-studies/internal/bg-background.png')}
           >
             <p>
               This project was a revision upon a previous product we had released to our client. Upon
@@ -75,7 +76,7 @@ export function InternalRedesignCaseStudy() {
           <CaseStudySection
             letter="C"
             title="Competitor Analysis"
-            backgroundSrc="/images/case-studies/internal/bg-competitor.png"
+            backgroundSrc={assetPath('images/case-studies/internal/bg-competitor.png')}
           >
             <p>
               Given the platform&apos;s complexity, I looked to Mobbin to conduct a broad pattern sweep. The
@@ -108,7 +109,7 @@ export function InternalRedesignCaseStudy() {
           <CaseStudySection
             letter="D"
             title="Personas"
-            backgroundSrc="/images/case-studies/internal/bg-personas.png"
+            backgroundSrc={assetPath('images/case-studies/internal/bg-personas.png')}
           >
             <p>
               With my analyses completed, I formulated the following 2 user personas to better guide my
@@ -118,7 +119,7 @@ export function InternalRedesignCaseStudy() {
               <article className="case-study__persona-card">
                 <div className="case-study__persona-header">
                   <img
-                    src="/images/case-studies/internal/persona-maya.png"
+                    src={assetPath('images/case-studies/internal/persona-maya.png')}
                     alt=""
                     className="case-study__persona-avatar"
                     draggable={false}
@@ -149,7 +150,7 @@ export function InternalRedesignCaseStudy() {
               <article className="case-study__persona-card">
                 <div className="case-study__persona-header">
                   <img
-                    src="/images/case-studies/internal/persona-jason.png"
+                    src={assetPath('images/case-studies/internal/persona-jason.png')}
                     alt=""
                     className="case-study__persona-avatar"
                     draggable={false}
@@ -192,7 +193,7 @@ export function InternalRedesignCaseStudy() {
           <CaseStudySection
             letter="E"
             title="Results"
-            backgroundSrc="/images/case-studies/internal/bg-results.png"
+            backgroundSrc={assetPath('images/case-studies/internal/bg-results.png')}
           >
             <p>
               My redesign delivered on two fronts: a stronger foundation and a significantly cleaner
@@ -206,14 +207,14 @@ export function InternalRedesignCaseStudy() {
             <div className="case-study__wireframes-row">
               <div className="case-study__wireframe-panel">
                 <img
-                  src="/images/case-studies/internal/wireframe-1.png"
+                  src={assetPath('images/case-studies/internal/wireframe-1.png')}
                   alt="Redesigned account dashboard wireframe"
                   draggable={false}
                 />
               </div>
               <div className="case-study__wireframe-panel">
                 <img
-                  src="/images/case-studies/internal/wireframe-2.png"
+                  src={assetPath('images/case-studies/internal/wireframe-2.png')}
                   alt="Portal activities wireframe"
                   draggable={false}
                 />
@@ -227,7 +228,7 @@ export function InternalRedesignCaseStudy() {
             </p>
             <div className="case-study__wireframe case-study__wireframe--tall">
               <img
-                src="/images/case-studies/internal/wireframe-3.png"
+                src={assetPath('images/case-studies/internal/wireframe-3.png')}
                 alt="Edit MAR wireframe"
                 draggable={false}
               />

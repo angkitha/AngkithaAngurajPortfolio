@@ -1,3 +1,4 @@
+import { assetPath } from '../lib/assetPath';
 import './IMacDisplay.css';
 
 type IMacDisplayProps = {
@@ -22,7 +23,7 @@ export function IMacDisplay({ demoSrc, demoAlt = '' }: IMacDisplayProps) {
             </div>
             <div className="imac-display__frame-wrap" aria-hidden>
               <img
-                src="/images/case-studies/machinery/imac-frame.png"
+                src={assetPath('images/case-studies/machinery/imac-frame.png')}
                 alt=""
                 className="imac-display__frame"
                 draggable={false}

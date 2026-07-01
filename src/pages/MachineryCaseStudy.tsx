@@ -1,6 +1,7 @@
 import { HeaderNav } from '../components/HeaderNav';
 import { IMacDisplay } from '../components/IMacDisplay';
 import { CaseStudySection } from '../components/CaseStudySection';
+import { assetPath } from '../lib/assetPath';
 import './CaseStudy.css';
 
 const DEMO_URL = 'https://drive.google.com/file/d/1OJkDAGvVYSHAjlG8q5zcti70FEHQ4J2H/view';
@@ -22,13 +23,13 @@ export function MachineryCaseStudy() {
               Watch Demo
             </a>
             <img
-              src="/images/case-studies/play-icon.png"
+              src={assetPath('images/case-studies/play-icon.png')}
               alt=""
               className="case-study__play-icon"
               draggable={false}
             />
           </div>
-          <IMacDisplay demoSrc="/images/case-studies/machinery-demo.gif" demoAlt="Machinery website redesign demo" />
+          <IMacDisplay demoSrc={assetPath('images/case-studies/machinery-demo.gif')} demoAlt="Machinery website redesign demo" />
         </aside>
 
         <main className="case-study__content">
@@ -46,7 +47,7 @@ export function MachineryCaseStudy() {
           <CaseStudySection
             letter="B"
             title="Background"
-            backgroundSrc="/images/case-studies/machinery/bg-background.png"
+            backgroundSrc={assetPath('images/case-studies/machinery/bg-background.png')}
           >
             <p>
               Our client presented their product with one main concern: they felt as though their catalog
@@ -101,7 +102,7 @@ export function MachineryCaseStudy() {
           <CaseStudySection
             letter="C"
             title="Competitor Analysis"
-            backgroundSrc="/images/case-studies/machinery/bg-competitor.png"
+            backgroundSrc={assetPath('images/case-studies/machinery/bg-competitor.png')}
           >
             <p>
               In order to better understand what a successful parts catalog web platform looks like, I
@@ -145,7 +146,7 @@ export function MachineryCaseStudy() {
           <CaseStudySection
             letter="D"
             title="Personas"
-            backgroundSrc="/images/case-studies/machinery/bg-personas-scroll.png"
+            backgroundSrc={assetPath('images/case-studies/machinery/bg-personas-scroll.png')}
           >
             <p>
               With the analysis in hand, I created the following 2 user personas to better guide my design
@@ -155,7 +156,7 @@ export function MachineryCaseStudy() {
               <article className="case-study__persona-card">
                 <div className="case-study__persona-header">
                   <img
-                    src="/images/case-studies/machinery/persona-marcus.png"
+                    src={assetPath('images/case-studies/machinery/persona-marcus.png')}
                     alt=""
                     className="case-study__persona-avatar"
                     draggable={false}
@@ -189,7 +190,7 @@ export function MachineryCaseStudy() {
               <article className="case-study__persona-card">
                 <div className="case-study__persona-header">
                   <img
-                    src="/images/case-studies/machinery/persona-priya.png"
+                    src={assetPath('images/case-studies/machinery/persona-priya.png')}
                     alt=""
                     className="case-study__persona-avatar"
                     draggable={false}
@@ -230,7 +231,7 @@ export function MachineryCaseStudy() {
           <CaseStudySection
             letter="E"
             title="Results"
-            backgroundSrc="/images/case-studies/machinery/bg-results-alt.png"
+            backgroundSrc={assetPath('images/case-studies/machinery/bg-results-alt.png')}
           >
             <p>
               The resulting redesign streamlined the path from landing to purchase by immediately displaying
@@ -244,7 +245,7 @@ export function MachineryCaseStudy() {
             </p>
             <div className="case-study__wireframe">
               <img
-                src="/images/case-studies/machinery/wireframe-1.png"
+                src={assetPath('images/case-studies/machinery/wireframe-1.png')}
                 alt="Redesigned machinery catalog wireframe"
                 draggable={false}
               />
@@ -265,7 +266,7 @@ export function MachineryCaseStudy() {
             </p>
             <div className="case-study__wireframe">
               <img
-                src="/images/case-studies/machinery/wireframe-2.png"
+                src={assetPath('images/case-studies/machinery/wireframe-2.png')}
                 alt="AI assistant wireframe"
                 draggable={false}
               />
