@@ -9,7 +9,7 @@ const bioParagraphs = [
   null,
   'I\u2019m passionate about building web products that are human-centered. At the core of what I do (and in part due to my background in software development), I strive for design system excellence and organized systems. Every design I construct is a canvas for future iterations and web development. I love talking to the people I design for and ensure that each product I release captures both my audience\u2019s satisfaction and my design expertise.',
   null,
-  'I am currently developing various plug-ins to help my organization bettwer streamline their internal design efforts. On the side, I\u2019m developing a Portfolio 2.0 meant to serve as my online diary, instead of a generic, recruiter-oriented website.',
+  'I am currently developing various plug-ins to help my organization better streamline their internal design efforts. On the side, I\u2019m developing a Portfolio 2.0 meant to serve as my online diary, instead of a generic, recruiter-oriented website.',
   null,
   'I love talking with like-minded folks, regardless of technical background or industry. If you\u2019ve gotten this far, please connect with me on LinkedIn! I\u2019m sure we\u2019ll have a great chat :D',
 ];
