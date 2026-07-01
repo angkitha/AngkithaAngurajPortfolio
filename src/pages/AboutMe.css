@@ -1,0 +1,337 @@
+.portfolio-about {
+  --nav-h: 52px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+}
+
+.portfolio-about__main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 2vh, 24px) clamp(16px, 2.8vw, 40px);
+  overflow: auto;
+}
+
+.about-card {
+  width: min(1060px, 100%);
+  max-height: min(650px, calc(100dvh - var(--nav-h) - 32px));
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: clamp(14px, 1.4vw, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.about-card__header {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 6.94vw, 100px);
+  padding-left: 15px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.about-card__title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-card__title-crop {
+  position: relative;
+  overflow: hidden;
+  width: clamp(180px, 16.6vw, 239px);
+  aspect-ratio: 239 / 30;
+  flex-shrink: 0;
+}
+
+.about-card__title-crop img {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  height: 100.36%;
+  left: -13.47%;
+  top: -0.18%;
+  width: 125.49%;
+}
+
+.about-card__name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 1.39vw, 20px);
+  line-height: normal;
+  color: #000;
+  white-space: nowrap;
+}
+
+.about-card__role {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 1.39vw, 20px);
+  line-height: normal;
+  color: #000;
+  white-space: nowrap;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.about-card__body {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.about-card__photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border-left: 1px solid #0d193e;
+  padding-left: 15px;
+  flex-shrink: 0;
+  width: min(358px, 100%);
+}
+
+.about-card__photo-crop {
+  position: relative;
+  overflow: hidden;
+  width: 358px;
+  max-width: 100%;
+  aspect-ratio: 358 / 477;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.about-card__photo-crop img {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  /* Figma crop — scales uniformly with the 358×477 frame */
+  left: -20.2%;
+  width: 128%;
+  height: 128%;
+  top: -28%;
+}
+
+.about-card__signature-crop {
+  position: relative;
+  overflow: hidden;
+  width: 104px;
+  height: 35px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.about-card__signature-crop img {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  height: 113.03%;
+  left: 0;
+  top: -6.45%;
+  width: 189.18%;
+}
+
+.about-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  padding-top: clamp(20px, 3.47vw, 50px);
+  overflow: hidden;
+}
+
+.about-card__meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 clamp(20px, 5.56vw, 80px);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.about-card__meta-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-card__meta-item,
+.about-card__link-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.about-card__meta-number {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  color: #000;
+  padding-top: 7px;
+  flex-shrink: 0;
+}
+
+.about-card__meta-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.39vw, 20px);
+  line-height: normal;
+  color: #000;
+  white-space: nowrap;
+}
+
+.about-card__bio {
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+  padding: 0 15px 0 clamp(16px, 2.08vw, 30px);
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.about-card__bio-number {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.about-card__bio-text {
+  flex: 1;
+  min-width: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: normal;
+  color: #000;
+}
+
+.about-card__bio-text p {
+  margin: 0;
+}
+
+.about-card__bio-spacer {
+  height: 14px;
+}
+
+.about-card__links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 clamp(24px, 3.47vw, 50px);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.about-card__link-number {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: normal;
+  color: #000;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+.about-card__link {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: normal;
+  color: #000;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.about-card__link-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: normal;
+  color: #000;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .portfolio-about__main {
+    align-items: flex-start;
+    overflow: auto;
+  }
+
+  .about-card {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .about-card__body {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .about-card__photo-column {
+    border-left: none;
+    padding-left: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-card__photo-crop {
+    width: 358px;
+    max-width: min(358px, calc(100% - 8px));
+  }
+
+  .about-card__details {
+    padding-top: 20px;
+    overflow: visible;
+  }
+
+  .about-card__meta {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .about-card__bio {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-left: 0;
+  }
+
+  .about-card__role {
+    padding-bottom: 0;
+  }
+
+  .about-card__meta-text {
+    white-space: normal;
+  }
+}

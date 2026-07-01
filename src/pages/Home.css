@@ -1,0 +1,19 @@
+.portfolio-home {
+  --nav-h: 52px;
+  --main-h: calc(100dvh - var(--nav-h));
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+}
+
+.portfolio-home__main {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}

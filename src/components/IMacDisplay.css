@@ -1,0 +1,69 @@
+/* Figma: Display 550×440 pt-22, viewport 500×281, frame extends for chin + stand */
+.imac-display {
+  width: min(550px, 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.imac-display__stage {
+  width: min(550px, 100%);
+  padding-top: clamp(12px, 2.5vh, 22px);
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.imac-display__display {
+  width: min(550px, 100%);
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.imac-display__viewport {
+  position: relative;
+  width: min(500px, 100%);
+  aspect-ratio: 500 / 281;
+  overflow: visible;
+  /* Stand extends ~49% below the 281px head */
+  margin-bottom: 27.5%;
+}
+
+.imac-display__screen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+  z-index: 0;
+}
+
+.imac-display__screen-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center top;
+  pointer-events: none;
+  user-select: none;
+}
+
+.imac-display__frame-wrap {
+  position: absolute;
+  top: -8.68%;
+  right: -5.08%;
+  bottom: -48.96%;
+  left: -5.08%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.imac-display__frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+  user-select: none;
+}

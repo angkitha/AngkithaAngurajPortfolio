@@ -1,0 +1,58 @@
+.page-transition-stack {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  isolation: isolate;
+}
+
+.page-transition {
+  height: 100%;
+  width: 100%;
+}
+
+.page-transition--outgoing {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  filter: blur(0);
+  transition:
+    opacity 720ms cubic-bezier(0.33, 0, 0.2, 1),
+    filter 720ms cubic-bezier(0.33, 0, 0.2, 1);
+}
+
+.page-transition--outgoing-hidden {
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.page-transition--incoming {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  filter: blur(0);
+  transition:
+    opacity 720ms cubic-bezier(0.33, 0, 0.2, 1),
+    filter 720ms cubic-bezier(0.33, 0, 0.2, 1);
+}
+
+.page-transition--incoming-hidden {
+  opacity: 0;
+  filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition--outgoing,
+  .page-transition--incoming {
+    transition: none;
+    filter: none;
+    opacity: 1;
+  }
+
+  .page-transition--outgoing-hidden,
+  .page-transition--incoming-hidden {
+    opacity: 1;
+    filter: none;
+  }
+}

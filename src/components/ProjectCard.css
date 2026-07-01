@@ -1,0 +1,174 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(4px, 0.8vh, 10px);
+  flex-shrink: 1;
+  min-height: 0;
+}
+
+.project-card__shell {
+  position: relative;
+  padding: clamp(8px, 1.2vh, 20px) clamp(16px, 2.5vw, 36px);
+  border-radius: 8px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.project-card__shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(227, 253, 255, 0.48) 0%,
+    rgba(227, 253, 255, 0.48) 48%,
+    rgba(255, 187, 104, 0.38) 100%
+  );
+  background-size: 240% 100%;
+  background-position: 0% 50%;
+  transition: opacity 0.25s ease;
+}
+
+.project-card__shell--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-card__shell:hover::before,
+.project-card__shell--link:hover::before {
+  opacity: 1;
+  animation: project-card-shimmer 3.6s ease-in-out infinite;
+}
+
+@keyframes project-card-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card__shell:hover::before,
+  .project-card__shell--link:hover::before {
+    animation: none;
+    background-position: 50% 50%;
+    background: linear-gradient(
+      90deg,
+      rgba(227, 253, 255, 0.38) 0%,
+      rgba(227, 253, 255, 0.38) 48%,
+      rgba(255, 187, 104, 0.3) 100%
+    );
+  }
+}
+
+/* Figma MacBook frame: 290×168. Screen inset matches cover layer behind frame. */
+.project-card__device {
+  position: relative;
+  z-index: 1;
+  height: clamp(90px, calc((100dvh - 52px - 200px) / 3.2), 168px);
+  aspect-ratio: 290 / 168;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.project-card__screen {
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Default: 228×162 cover centered in 168px-tall device (Figma MachineCover) */
+.screen--standard .project-card__screen {
+  left: 10.517%;
+  top: 1.786%;
+  width: 78.621%;
+  height: 96.429%;
+}
+
+/* Fintech: 229×168 cover, full device height */
+.screen--tall .project-card__screen {
+  left: 10.345%;
+  top: 0;
+  width: 78.966%;
+  height: 100%;
+}
+
+.project-card__screen-img {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  max-width: none;
+}
+
+/* Fill screen area — slight horizontal stretch allowed per design */
+.cover--machine,
+.cover--machine-plugin,
+.cover--redesign-2 {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+
+.cover--redesign-1 {
+  left: 50%;
+  top: -0.02%;
+  width: 100%;
+  height: 99.14%;
+  transform: translateX(-50%);
+  object-fit: fill;
+  object-position: center top;
+}
+
+.cover--design-orig {
+  left: 50%;
+  top: 0;
+  width: 100.25%;
+  height: 175.6%;
+  transform: translateX(-50%);
+  object-fit: fill;
+  object-position: center top;
+}
+
+.project-card__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  max-width: none;
+}
+
+.project-card__label {
+  padding: clamp(4px, 0.5vh, 7px) 14px;
+  flex-shrink: 0;
+}
+
+.project-card__label p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: clamp(10px, 0.83vw, 12px);
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .project-card__label p {
+    white-space: normal;
+  }
+}
