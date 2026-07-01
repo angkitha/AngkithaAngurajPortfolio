@@ -22,8 +22,6 @@ body {
   overflow: hidden;
 }
 #root:has(.case-study) {
-  height: auto;
-  max-height: none;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
