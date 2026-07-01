@@ -9,7 +9,7 @@ export type Project = {
 export const studyProjects: Project[] = [
   {
     title: 'MACHINERY WEBSITE REDESIGN',
-    coverSrc: './images/machine-cover.png',
+    coverSrc: '../images/machine-cover.png',
     coverClassName: 'cover--machine',
     caseStudyPath: '/case-study/machinery-website-redesign',
   },
